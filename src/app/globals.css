@@ -266,6 +266,71 @@ a {
   transform: translateY(-4px);
 }
 
+/* Workflow Step Cards - Interactive Hover Effects */
+.workflow-card {
+  cursor: pointer;
+}
+
+.workflow-card .step-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #CBD5E1;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.workflow-card:hover .step-number {
+  color: var(--primary) !important;
+}
+
+.workflow-card .step-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.workflow-card .step-icon {
+  color: #94A3B8;
+  transition: color 0.3s ease;
+}
+
+.workflow-card:hover .step-icon-box {
+  background: var(--primary-light);
+}
+
+.workflow-card:hover .step-icon {
+  color: var(--primary);
+}
+
+.workflow-card .step-progress-track {
+  margin-top: 24px;
+  height: 3px;
+  width: 100%;
+  background: #E2E8F0;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.workflow-card .step-progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: transparent;
+  border-radius: 2px;
+  transition: width 0.38s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease;
+}
+
+.workflow-card:hover .step-progress-fill {
+  width: var(--target-progress, 100%);
+  background-color: var(--primary);
+}
+
 /* Badges */
 .badge {
   display: inline-flex;
